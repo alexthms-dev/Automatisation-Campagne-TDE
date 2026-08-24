@@ -102,15 +102,7 @@ Contient les tests permettant de vérifier le fonctionnement des différents scr
 
 ## Utilisation
 
-Le script principal à utiliser pour automatiser une campagne de recherche est :
 
-```text
-search_TDE.py
-```
-
-Il permet de lancer automatiquement les différentes étapes de la campagne à partir des directions et de l'énergie initiale fournies.
-
-Les détails concernant les paramètres et les commandes d'exécution seront ajoutés dans la documentation.
 
 ## Prérequis
 
@@ -119,8 +111,9 @@ Le projet utilise notamment :
 * Python
 * LAMMPS
 * un potentiel interatomique basé sur le machine learning
+* etc ... (voir autres, notamment les inputs)
 
-Les versions utilisées ainsi que les dépendances Python seront précisées dans la documentation.
+
 
 ## Documentation
 
