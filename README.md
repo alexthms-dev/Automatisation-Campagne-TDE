@@ -134,6 +134,6 @@ Ce projet a été développé dans le cadre d'un stage au **LAAS-CNRS** portant 
 
 ## Auteur
 
-**[Prénom Nom]**
+**[Alexandre THOMAS]**
 
 Stage au LAAS-CNRS
