@@ -43,18 +43,6 @@ Il constitue la première étape de la campagne.
 
 Ce script permet de lancer les calculs associés aux fichiers batch générés précédemment.
 
-Il constitue la deuxième étape de la campagne :
-
-```text
-generate_TDE.py
-       ↓
-création des fichiers
-       ↓
-launch_TDE.py
-       ↓
-lancement des calculs
-```
-
 ### `detect_TDE.py`
 
 Ce script analyse les résultats des simulations.
@@ -68,33 +56,6 @@ Il permet ainsi de déterminer, pour une direction et une énergie données, si 
 Ce script automatise l'ensemble de la campagne de recherche de l'énergie de seuil.
 
 Il utilise les trois autres scripts :
-
-```text
-             search_TDE.py
-                    │
-                    ▼
-            generate_TDE.py
-                    │
-                    ▼
-             launch_TDE.py
-                    │
-                    ▼
-            Fin des calculs
-                    │
-                    ▼
-             detect_TDE.py
-                    │
-                    ▼
-       Analyse des résultats
-                    │
-                    ▼
-       Sélection des directions
-                    │
-                    ▼
-          Énergie supérieure
-                    │
-                    └──────────► nouvelle campagne
-```
 
 À partir d'un ensemble de **directions** et d'une **énergie initiale**, `search_TDE.py` :
 
