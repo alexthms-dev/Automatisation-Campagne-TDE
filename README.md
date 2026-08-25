@@ -152,40 +152,7 @@ Contient les tests permettant de vérifier le fonctionnement des différents scr
 
 ## Utilisation
 
-
-
-
-
-
-
-
-## Workflow général
-
-Le fonctionnement global du projet peut être résumé comme suit :
-
-```text
-                         Recherche de la TDE
-                                │
-                                ▼
-                       search_TDE.py
-                                │
-                ┌───────────────┼───────────────┐
-                ▼               ▼               ▼
-        generate_TDE.py  launch_TDE.py  detect_TDE.py
-                │               │               │
-                └───────────────┴───────────────┘
-                                │
-                                ▼
-                       TDE_results.txt
-                                │
-                                ▼
-                       Analyse des résultats
-                                │
-              ┌─────────────────┼─────────────────┐
-              ▼                 ▼                 ▼
-         Histogramme       Probabilité       Carte 3D
-          des TDE          de Frenkel         de la TDE
-```
+A remplir
 
 
 
