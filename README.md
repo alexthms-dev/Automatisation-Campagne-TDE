@@ -38,9 +38,9 @@ Les scripts du projet peuvent être regroupés en deux catégories :
 
 ### Analyse et visualisation
 
-* plot_TDE_histogramme.py : visualisation de la distribution des énergies de seuil ;
-* plot_TDE_proba.py : calcul et visualisation de la probabilité de création d'une paire de Frenkel en fonction de l'énergie ;
-* map_3D_TDE.py : visualisation des TDE en fonction des directions.
+* `plot_TDE_histogramme.py` : visualisation de la distribution des énergies de seuil ;
+* `plot_TDE_proba.py` : calcul et visualisation de la probabilité de création d'une paire de Frenkel en fonction de l'énergie ;
+* `map_3D_TDE.py` : visualisation des TDE en fonction des directions.
 
 Les scripts d'analyse utilisent les données contenues dans le fichier `TDE_results.txt` généré à la fin d'une campagne par le script search_TDE.py.
 
