@@ -1,4 +1,4 @@
-# Recherche de l'énergie de seuil dans le germanium
+# Automatisation de campagnes de calcul de TDE sur LAMMPS
 
 Scripts Python développés dans le cadre d'un stage au **LAAS-CNRS** pour automatiser des campagnes de simulations atomistiques avec **LAMMPS**, dans le but d'étudier l'énergie de seuil dans le germanium (Ge).
 
