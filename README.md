@@ -25,7 +25,26 @@ La campagne de simulations est organisée en plusieurs étapes :
 
 Le script `search_TDE.py` automatise l'ensemble de cette procédure.
 
-## Scripts
+## Organisation des scripts
+
+Les scripts du projet peuvent être regroupés en deux catégories :
+
+### Recherche de l'énergie de seuil
+
+* `generate_TDE.py` : préparation de la campagne de simulations ;
+* `launch_TDE.py` : lancement des calculs ;
+* `detect_TDE.py` : analyse des simulations et détection des paires de Frenkel ;
+* `search_TDE.py` : automatisation de l'ensemble de la campagne.
+
+### Analyse et visualisation
+
+* plot_TDE_histogramme.py : visualisation de la distribution des énergies de seuil ;
+* plot_TDE_proba.py : calcul et visualisation de la probabilité de création d'une paire de Frenkel en fonction de l'énergie ;
+* map_3D_TDE.py : visualisation des TDE en fonction des directions.
+
+Les scripts d'analyse utilisent les données contenues dans le fichier `TDE_results.txt` généré à la fin d'une campagne par le script search_TDE.py.
+
+## Scripts pour la campagne de calcul de TDE
 
 ### `generate_TDE.py`
 
@@ -69,6 +88,34 @@ Il utilise les trois autres scripts :
 
 Cette automatisation permet de rechercher l'énergie de seuil pour différentes directions sans avoir à lancer manuellement chaque étape.
 
+## Scripts pour l'analyse des résultats
+
+À la fin d'une campagne de recherche, le script `search_TDE.py` génère un fichier `TDE_results.txt` contenant les résultats obtenus pour les différentes directions simulées.
+
+Ce fichier permet ensuite d'analyser les résultats de la campagne et de visualiser la distribution de l'énergie de seuil.
+
+Plusieurs scripts Python ont été développés pour faciliter cette analyse.
+
+### plot_TDE_histogramme.py
+
+Le premier script permet de représenter les résultats sous forme d'un **histogramme**.
+
+Cette représentation permet notamment de visualiser la distribution des énergies de seuil obtenues au cours de la campagne de simulations.
+
+### plot_TDE_proba.py
+
+Le deuxième script permet de calculer et de représenter la **probabilité de création d'une paire de Frenkel en fonction de l'énergie**.
+
+Cette représentation permet d'étudier l'évolution de la probabilité de création d'un défaut en fonction de l'énergie incidente.
+
+### map_3D_TDE.py
+
+Le troisième script permet de représenter les résultats sous la forme d'une **carte 3D de l'énergie de seuil**.
+
+Les directions sont représentées dans l'espace et les couleurs indiquent la valeur de l'énergie de seuil associée à chaque direction.
+
+Cette représentation permet de visualiser la dépendance directionnelle de l'énergie de seuil dans le germanium.
+
 ## Structure du projet
 
 ```text
@@ -79,6 +126,9 @@ Cette automatisation permet de rechercher l'énergie de seuil pour différentes 
 │   ├── launch_TDE.py
 │   ├── detect_TDE.py
 │   └── search_TDE.py
+│   └── plot_TDE_histogramme.py
+│   └── plot_TDE_proba.py
+│   └── map_3D_TDE.py
 ├── examples/
 ├── docs/
 └── tests/
@@ -101,6 +151,43 @@ Contient la documentation détaillée du projet.
 Contient les tests permettant de vérifier le fonctionnement des différents scripts.
 
 ## Utilisation
+
+
+
+
+
+
+
+
+## Workflow général
+
+Le fonctionnement global du projet peut être résumé comme suit :
+
+```text
+                         Recherche de la TDE
+                                │
+                                ▼
+                       search_TDE.py
+                                │
+                ┌───────────────┼───────────────┐
+                ▼               ▼               ▼
+        generate_TDE.py  launch_TDE.py  detect_TDE.py
+                │               │               │
+                └───────────────┴───────────────┘
+                                │
+                                ▼
+                       TDE_results.txt
+                                │
+                                ▼
+                       Analyse des résultats
+                                │
+              ┌─────────────────┼─────────────────┐
+              ▼                 ▼                 ▼
+         Histogramme       Probabilité       Carte 3D
+          des TDE          de Frenkel         de la TDE
+```
+
+
 
 
 
