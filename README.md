@@ -23,8 +23,6 @@ La campagne de simulations est organisée en plusieurs étapes :
 5. Sélection des directions nécessitant des simulations supplémentaires.
 6. Augmentation de l'énergie et répétition du processus.
 
-Le script `search_TDE.py` automatise l'ensemble de cette procédure.
-
 ## Organisation des scripts
 
 Les scripts du projet peuvent être regroupés en deux catégories :
